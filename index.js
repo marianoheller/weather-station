@@ -9,10 +9,12 @@ $(document).ready(function() {
             var html = '';
             console.log(weather);
 
-            html = '<div>'
-            html += '<img src="'+weather.image+'" class="" />';
-            html += '<p>'+weather.temp+' C</p>';
-            html += '<p>'+weather.currently+'</p>'
+            html = '<div class="col-md-6">';
+            html += '<img src="'+weather.image+'" class="hvr-fade pull-left" />';
+            html += '</div>';
+            html += '<div class="col-md-6 hvr-fade ">'
+            html += '<p class="pull-right"><span id="weather-header-temp" >'+weather.temp+'</span></p>';
+            html += '<p class="pull-right"><span id="weather-header-currently">'+weather.currently+'</span></p>';
             html += '</div>'
             $("#weather-header").html(html);
 
