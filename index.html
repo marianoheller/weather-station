@@ -6,18 +6,25 @@
         <title>Wheater station</title>
 
         <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u' crossorigin='anonymous'>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link  rel='stylesheet' href="./index.css">
     </head>
     <body>
         <div class="container-fluid">
-            <div class="container col-md-4 col-md-offset-4">
-                    <div id="weather">
+            <div class="container col-md-6 col-md-offset-3">
+                    
+                    <div id="loader" class="col-md-4 col-md-offset-4 text-center">
+                        <i class="fa fa-spinner fa-5x fa-spin" aria-hidden="true"></i>
+                    </div>
+                    
+                    <div id="weather" class="hidden">
+                        
                         <div class="row">
-                            <div id="weather-header" class="container col-md-8 col-md-offset-2"></div>
+                            <div id="weather-header" ></div>
                         </div>
                         <div class="row">
-                            <div class="container col-md-6" id="weather-details"></div>
-                            <div class="container col-md-6" id="weather-forecast"></div>
+                            <div  id="weather-details"></div>
+                            <div  id="weather-forecast"></div>
                         </div>
                         
                     </div>
@@ -29,6 +36,7 @@
 			  src="https://code.jquery.com/jquery-2.2.4.js"
 			  integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
 			  crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.simpleWeather/3.1.0/jquery.simpleWeather.min.js"></script>
 
         <script src="./index.js"></script>

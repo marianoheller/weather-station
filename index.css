@@ -1,29 +1,46 @@
 html, body {
     height: 100%;
+    color: white;
+}
+
+
+
+#loader {
+    margin-top: 10px;
 }
 
 body {
-    /*background-image: url(http://www.weatherwizkids.com/wp-content/uploads/2015/02/fractus-clouds.jpg);*/
+    background-image: url(http://www.weatherwizkids.com/wp-content/uploads/2015/02/fractus-clouds.jpg);
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
 
+tbody > tr:hover  {
+    color: black;
+}
+
 #weather {
     margin-top: 50px;
-    padding: 10px 10px 10px 10px;
+    padding: 20px 20px 20px 20px;
 
     border-style: solid;
     border-width: 3px;
     border-color: rgba(0, 0, 0, 0.75);
     border-radius: 1px;
-    background: rgba(250, 250, 250, 0.75);
+    background: rgba(0,0,0, 0.75);
 
-    -webkit-box-shadow: 7px 7px 70px 8px rgba(0,0,0,0.74);
-    -moz-box-shadow: 7px 7px 70px 8px rgba(0,0,0,0.74);
-    box-shadow: 7px 7px 70px 8px rgba(0,0,0,0.74);
+    -webkit-box-shadow: 7px 7px 70px 8px rgba(250,250,250,0.75);
+    -moz-box-shadow: 7px 7px 70px 8px rgba(250,250,250,0.75);
+    box-shadow: 7px 7px 70px 8px rgba(250,250,250,0.75);
 }
 
-#weather-header-temp {
+#weather-image {
+    height: 125px;
+    width: auto;
+}
+
+
+.weather-header-temp {
     font-size: 80px; /*img 250*180*/
 }
 
