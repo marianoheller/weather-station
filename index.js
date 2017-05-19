@@ -25,7 +25,7 @@ $(document).ready(function() {
         var request = new XMLHttpRequest();
 
         var method = 'GET';
-        var url = 'http://maps.googleapis.com/maps/api/geocode/json?latlng='+latitude+','+longitude+'&sensor=true';
+        var url = 'https://maps.googleapis.com/maps/api/geocode/json?latlng='+latitude+','+longitude+'&sensor=true';
         var async = true;
 
         request.open(method, url, async);
@@ -68,8 +68,7 @@ $(document).ready(function() {
             success: function(weather) {
                 var html = '';
 
-                html = '<div id="tooltiper" class="col-md-6 col-md-offset-3 hvr-fade text-center" data-placement="auto right" data-toggle="tooltip" title="Click to change unit!">';
-                // html += '<img id="weather-image" src="'+weather.image+'" class="hvr-fade pull-left" />';
+                html += '<div id="tooltiper" class="col-md-6 col-md-offset-3 hvr-fade text-center" data-placement="auto left" data-toggle="tooltip" title="Click to change unit!">';
                 // html += '</div>';
                 // html += '<div class="col-md-6 hvr-fade ">'
                 html += '<p class="weather-header-temp" id="celcius">'+weather.temp+' °C</p>';
@@ -77,6 +76,7 @@ $(document).ready(function() {
                 html += '<p class="weather-header-temp hidden" id="freedom">'+Math.round(x)+' °F</p>';
                 // html += '<p ><div id="weather-header-currently">'+weather.currently+'</div></p>';
                 html += '</div>'
+                html += '<div class="col-md-3" ><img id="weather-image" src="'+weather.image+'"  /></div>';
                 $("#weather-header").html(html);
 
 
